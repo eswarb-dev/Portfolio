@@ -5,7 +5,7 @@ import GlassCard from "../ui/GlassCard";
 
 const Footer = () => {
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/in/eswar-balu", icon: Linkedin },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/eswar-b-491b12328", icon: Linkedin },
     { name: "GitHub", href: "https://github.com/Eswar-AIDS", icon: Github },
     { name: "Email", href: "https://mail.google.com/mail/?view=cm&fs=1&to=eswarbalu28@gmail.com", icon: Mail },
   ];

@@ -26,7 +26,7 @@ const Hero = () => {
 
       <PhysicsCard style={{ top: '60%', left: '10%' }}>
         <div style={{ display: 'flex', gap: '12px' }}>
-          <a href="https://linkedin.com/in/eswar-balu" target="_blank" className="btn-pill btn-blue mono">
+          <a href="https://www.linkedin.com/in/eswar-b-491b12328" target="_blank" className="btn-pill btn-blue mono">
             LinkedIn
           </a>
           <button onClick={copyEmail} className="btn-pill btn-outline mono">
