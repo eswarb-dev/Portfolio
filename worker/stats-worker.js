@@ -91,6 +91,21 @@ const escapeHtml = (value) =>
 
 const getResumeFromEmail = (env) => env.RESUME_FROM_EMAIL || env.RESUME_NOTIFY_FROM || "Portfolio <onboarding@resend.dev>";
 
+const automatedEmailFooterHtml = `
+  <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0 16px;" />
+  <p style="margin: 0 0 6px; color: #6b7280; font-size: 14px; line-height: 1.5;">
+    This is an automated notification from <strong>eswar.me</strong>.
+  </p>
+  <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">
+    You received this email because a resume access request was submitted using this email address.
+    If you did not request this, please ignore this email.
+  </p>
+`;
+
+const automatedEmailFooterText = `This is an automated notification from eswar.me.
+
+You received this email because a resume access request was submitted using this email address. If you did not request this, please ignore this email.`;
+
 const sendResendEmail = async (env, emailPayload, errorContext) => {
   if (!env.RESEND_API_KEY) {
     throw new Error("Resume email provider is not configured.");
@@ -123,31 +138,14 @@ I'll only use your email to respond to this resume request.
 Regards,
 Eswar B
 
-Automated message from eswar.me
-
-You received this email because a resume access request was submitted using this email address. If you did not request this, please ignore it.
-
-Eswar B
-AI Engineer / Full-Stack Builder
-Portfolio: eswar.me
-LinkedIn: linkedin.com/in/eswar-balu28
-GitHub: github.com/Eswar-AIDS`;
+${automatedEmailFooterText}`;
   const html = `
     <p>Hi ${escapeHtml(resumeRequest.name)},</p>
     <p>Thanks for requesting my resume.</p>
     <p>You can view/download it here:<br><a href="${escapeHtml(resumeUrl)}">${escapeHtml(resumeUrl)}</a></p>
     <p>I'll only use your email to respond to this resume request.</p>
     <p>Regards,<br>Eswar B</p>
-    <hr>
-    <p><strong>Automated message from eswar.me</strong></p>
-    <p>You received this email because a resume access request was submitted using this email address. If you did not request this, please ignore it.</p>
-    <p>
-      Eswar B<br>
-      AI Engineer / Full-Stack Builder<br>
-      Portfolio: <a href="https://eswar.me">eswar.me</a><br>
-      LinkedIn: <a href="https://linkedin.com/in/eswar-balu28">linkedin.com/in/eswar-balu28</a><br>
-      GitHub: <a href="https://github.com/Eswar-AIDS">github.com/Eswar-AIDS</a>
-    </p>
+    ${automatedEmailFooterHtml}
   `;
 
   await sendResendEmail(
@@ -184,6 +182,7 @@ Time: ${resumeRequest.requestedAt}`;
     <p><strong>Reason:</strong> ${escapeHtml(reason)}</p>
     <p><strong>Visitor ID:</strong> ${escapeHtml(visitorId)}</p>
     <p><strong>Time:</strong> ${escapeHtml(resumeRequest.requestedAt)}</p>
+    ${automatedEmailFooterHtml}
   `;
 
   await sendResendEmail(
