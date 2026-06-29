@@ -1,0 +1,25 @@
+name = "eswar-portfolio-stats"
+main = "stats-worker.js"
+compatibility_date = "2026-06-09"
+
+# Public frontend origins allowed to call this worker. Separate multiple origins with commas.
+# Example for custom domain:
+# SITE_ORIGIN = "https://eswar.me"
+# Example for GitHub Pages:
+# SITE_ORIGIN = "https://eswar-aids.github.io"
+[vars]
+SITE_ORIGIN = "http://localhost:5173,http://localhost:5174,https://eswar.me,https://eswar-aids.github.io"
+RESUME_NOTIFY_EMAIL = "eswarbalu28@gmail.com"
+RESUME_FILE_URL = "https://xfgqwucmbxcnfpxtepbm.supabase.co/storage/v1/object/public/Resume/ESWAR_B_RESUME.pdf"
+RESUME_FROM_EMAIL = "Eswar Portfolio <resume@eswar.me>"
+
+# Create this namespace with:
+# wrangler kv namespace create STATS_KV
+[[kv_namespaces]]
+binding = "STATS_KV"
+id = "replace_with_your_kv_namespace_id"
+
+# Set the private token with:
+# wrangler secret put ADMIN_STATS_TOKEN
+# Set the Resend email API key with:
+# wrangler secret put RESEND_API_KEY
