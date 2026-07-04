@@ -5,7 +5,7 @@ import { BrutalButton, BrutalCard, SectionHeader } from "../ui/Brutal";
 
 const socialLinks = [
   { name: "LinkedIn", href: "https://linkedin.com/in/eswar-balu", icon: Linkedin },
-  { name: "GitHub", href: "https://github.com/Eswar-AIDS", icon: Github },
+  { name: "GitHub", href: "https://github.com/eswarb-dev/Portfolio", icon: Github },
 ];
 
 const Footer = () => (

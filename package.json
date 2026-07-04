@@ -1,5 +1,5 @@
 {
-  "name": "react-portfolio",
+  "name": "eswar-me",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,8 +8,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "worker:dev": "npx wrangler dev --config worker/wrangler.toml",
     "worker:deploy": "npx wrangler deploy --config worker/wrangler.toml",
     "worker:kv:create": "npx wrangler kv namespace create STATS_KV"

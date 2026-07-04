@@ -1,6 +1,6 @@
 # Portfolio Stats Worker
 
-Cloudflare Worker API for private visit stats and resume requests while the portfolio stays on GitHub Pages.
+Cloudflare Worker API for private visit stats and resume requests while the portfolio frontend runs at `https://eswar.me`.
 
 ## Setup
 
@@ -41,7 +41,7 @@ With Resend test mode, the recipient email must be the email address on your Res
 npm run worker:deploy
 ```
 
-6. Set the frontend API base URL before building the GitHub Pages site:
+6. Set the frontend API base URL in Vercel before building the site:
 
 ```env
 VITE_STATS_API_BASE_URL=https://eswar-portfolio-stats.<your-subdomain>.workers.dev
@@ -53,4 +53,4 @@ VITE_STATS_API_BASE_URL=https://eswar-portfolio-stats.<your-subdomain>.workers.d
 npm run worker:dev
 ```
 
-For local frontend testing, keep the Vite origin in the comma-separated `SITE_ORIGIN` allowlist, such as `http://localhost:5174`.
+For local frontend testing, add your Vite dev server origin to the comma-separated `SITE_ORIGIN` allowlist.

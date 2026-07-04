@@ -55,7 +55,7 @@ const Hero = () => {
                 View Projects
               </BrutalButton>
               <BrutalButton
-                href="https://github.com/Eswar-AIDS"
+                href="https://github.com/eswarb-dev/Portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="white"
