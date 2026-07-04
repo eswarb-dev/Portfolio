@@ -33,7 +33,7 @@ const Navbar = () => (
       </div>
 
       <a
-        href="https://github.com/eswarb-dev/Portfolio"
+        href="https://github.com/eswarb-dev"
         target="_blank"
         rel="noopener noreferrer"
         className="shrink-0 rounded-lg border-[3px] border-black bg-[#39ff14] px-3 py-1.5 text-[11px] font-black uppercase shadow-[2px_2px_0_#050505] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none focus-visible:translate-x-0.5 focus-visible:translate-y-0.5 focus-visible:shadow-none"

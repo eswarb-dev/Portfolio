@@ -13,7 +13,7 @@ const projects = [
     result: "66 breeds classified with 94.31% accuracy across Android, web, and TFLite-ready flows.",
     tags: ["YOLOv8", "Android", "Web", "TFLite", "66 breeds"],
     icon: Cpu,
-    github: "https://github.com/Eswar-AIDS/Cattle-Breed-Classification.git",
+    github: "https://github.com/eswarb-dev/Cattle-Breed-Classification.git",
     variant: "secondary",
     previewImages: [
       "/projects/breed-classification/app1.jpeg",
@@ -30,7 +30,7 @@ const projects = [
     result: "Generated summaries, MCQs, concept graphs, and revision blocks in one adaptive flow.",
     tags: ["LLMs", "React", "FastAPI", "Concept graphs"],
     icon: BookOpenCheck,
-    github: "https://github.com/Eswar-AIDS/Study-Mate.git",
+    github: "https://github.com/eswarb-dev/Study-Mate.git",
     preview: "https://study-mate-yy0u.onrender.com/",
     variant: "white",
     previewImages: [
@@ -49,7 +49,7 @@ const projects = [
     result: "Connected sensor monitoring, AI interpretation, and market-facing insight loops.",
     tags: ["ESP32", "AI", "IoT", "Market insights"],
     icon: BrainCircuit,
-    github: "https://github.com/Eswar-AIDS/AgroSphere360.git",
+    github: "https://github.com/eswarb-dev/AgroSphere360.git",
     variant: "white",
     previewGraphics: [AgroCircuit, OledGraphic],
     previewImages: ["/projects/agro360/pic1.jpeg", "/projects/agro360/pic2.jpeg"],
@@ -61,7 +61,7 @@ const projects = [
     result: "Student/admin dashboards, AI resume analysis, job discovery, and placement support.",
     tags: ["React", "SQLite", "Gemini AI", "Recruitment"],
     icon: BriefcaseBusiness,
-    github: "https://github.com/Eswar-AIDS/Hire-Wave.git",
+    github: "https://github.com/eswarb-dev/Hire-Wave.git",
     variant: "white",
     previewImages: [
       "/projects/Hire Wave/1.png",
